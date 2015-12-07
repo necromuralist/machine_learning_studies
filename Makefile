@@ -1,8 +1,8 @@
 # Makefile for Sphinx documentation
 #
 THIS_NAME = machine_learning
-RSYNC_NAME = machine_learning
-RSYNC_CATEGORY = explorations
+RSYNC_NAME = coursera_machine_learning
+RSYNC_CATEGORY = studies
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
@@ -16,7 +16,11 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(T
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(THIS_NAME)
 
-RSYNC_DIR = ~/repositories/documentation/all/build/html/$(RSYNC_CATEGORY)/$(RSYNC_NAME)
+GITHUBPAGEDIR = ~/repositories/documentation/necromuralist/build/necromuralist.github.io/
+ALLPAGESDIR = ~/repositories/documentation/all/build/html/
+
+GITHUB_RSYNC_DIR = $(GITHUBPAGEDIR)$(RSYNC_CATEGORY)/$(RSYNC_NAME)
+ALL_RSYNC_DIR = $(ALLPAGESDIR)$(RSYNC_CATEGORY)/$(RSYNC_NAME)
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
@@ -49,7 +53,8 @@ html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-	rsync -ravz $(BUILDDIR)/html/ $(RSYNC_DIR)
+	rsync -ravz $(BUILDDIR)/html/ $(GITHUB_RSYNC_DIR)
+	rsync -ravz $(BUILDDIR)/html/ $(ALL_RSYNC_DIR)
 
 pypi:
 	python setup.py build_sphinx

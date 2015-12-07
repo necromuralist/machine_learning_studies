@@ -1,5 +1,5 @@
-Week 1
-======
+Week 1 - Simple Linear Regression
+=================================
 
 <<name='imports', echo=False>>=
 # this package

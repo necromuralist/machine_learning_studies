@@ -13,5 +13,6 @@ Coursera's Machine Learning Course
    :maxdepth: 1
 
    Machine Learning Foundations: A Case Study Approach <foundations/index.rst>
+   Regression <regression/index.rst>
 
 
