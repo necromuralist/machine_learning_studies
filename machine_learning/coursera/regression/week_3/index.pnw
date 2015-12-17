@@ -1,5 +1,7 @@
-Week 1 - Simple Linear Regression
-=================================
+Week 3 - Assessing Fit (Polynomial Regression)
+==============================================
+
+This is the second course in the *Coursera Machine Learning* series.
 
 <<name='imports', echo=False>>=
 # this package

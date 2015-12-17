@@ -1,4 +1,3 @@
-
 Regression Week 1: Simple Linear Regression
 ===========================================
 
@@ -18,7 +17,7 @@ to assist you with solving the problems but feel free to ignore the
 helper code and write your own.
 
 Fire up graphlab create
-=======================
+-----------------------
 
 .. code:: python
 
@@ -32,7 +31,7 @@ Fire up graphlab create
     %matplotlib inline
 
 Load house sales data
-=====================
+---------------------
 
 Dataset is from house sales in King County, the region where the city of
 Seattle, WA is located.
@@ -143,7 +142,7 @@ Seattle, WA is located.
 
 
 Split data into training and testing
-====================================
+------------------------------------
 
 We use seed=0 so that everyone running this notebook gets the same
 results. In practice, you may set a random seed (or let GraphLab Create
@@ -154,7 +153,7 @@ pick a random seed for you).
     train_data,test_data = sales.random_split(.8,seed=0)
 
 Useful SFrame summary functions
-===============================
+-------------------------------
 
 In order to make use of the closed form solution as well as take
 advantage of graphlab's built in functions we will review some important
@@ -173,7 +172,7 @@ Let's compute the mean of the House Prices in King County in 2 different ways.
 divided by the total number of houses*
 
 method 1
-~~~~~~~~
+--------
 
 .. code:: python
 
@@ -182,7 +181,7 @@ method 1
     avg_price_1 = sum_prices/num_houses
 
 method 2
-~~~~~~~~
+--------
 
 .. code:: python
 
@@ -231,7 +230,7 @@ Aside: The python notation x.xxe+yy means x.xx \* 10^(yy). e.g 100 =
 10^2 = 1\*10^2 = 1e2
 
 Build a generic simple linear regression function
-=================================================
+-------------------------------------------------
 
 Armed with these SArray functions we can use the closed form solution
 found from lecture to compute the slope and intercept for a simple
@@ -349,7 +348,7 @@ price based on sqft\_living. Rembember that we train on train\_data!
 
 
 Predicting Values
-=================
+-----------------
 
 Now that we have the model parameters: intercept & slope we can make
 predictions. Using SArrays it's easy to multiply an SArray by a constant
@@ -384,7 +383,7 @@ predicted price for a house with 2650 sqft?**
 
 
 Residual Sum of Squares
-=======================
+-----------------------
 
 Now that we have a model and can make predictions let's evaluate our
 model using Residual Sum of Squares (RSS). Recall that RSS is the sum of
@@ -439,7 +438,7 @@ regression using squarefeet to predict prices on TRAINING data?**
 
 
 Predict the squarefeet given price
-==================================
+----------------------------------
 
 What if we want to predict the squarefoot given the price? Since we have
 an equation y = a + b\*x we can solve the function for x. So that if we
@@ -496,7 +495,7 @@ $800,000?**
 
 
 New Model: estimate prices from bedrooms
-========================================
+----------------------------------------
 
 We have made one model for predicting house prices using squarefeet, but
 there are many other features in the sales SFrame. Use your simple
@@ -510,7 +509,7 @@ predicting Prices based on number of bedrooms. Use the training data!
 
 
 Test your Linear Regression Algorithm
-=====================================
+-------------------------------------
 
 Now we have two models for predicting the price of a house. How do we
 know which one is better? Calculate the RSS on the TEST data (remember
