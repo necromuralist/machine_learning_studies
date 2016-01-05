@@ -7,5 +7,5 @@ dist/
 *~
 *.cover
 *.log
-*.ipynb
 .venv
+*.ipynb_checkpoints
