@@ -4,6 +4,9 @@ def get_numpy_data(data_sframe, features, output):
      - `data_sframe`: SFrame to convert
      - `features`: list of column names
      - `output`: the target
+    :return: (matrix of data_sframe columns
+              with 'constant' column and 'features' column,
+              array from data_sframe using 'output' column)
     """
     # add a column of 1's
     data_sframe['constant'] = 1
@@ -30,7 +33,11 @@ def get_numpy_data(data_sframe, features, output):
 
 
 def predict_output(feature_matrix, weights):
-    # assume feature_matrix is a numpy matrix containing the features
-    # as columns and weights is a corresponding numpy array
-    # create the predictions vector by using np.dot()
+    """
+    :param:
+     - `feature_matrix`:numpy matrix containing the features
+     - `weights`: vector to apply to the feature_matrix
+
+    :return: dot-product of feature_matrix and weights
+    """
     return feature_matrix.dot(weights)
