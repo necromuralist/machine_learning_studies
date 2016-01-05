@@ -1,3 +1,6 @@
+import numpy
+
+
 def get_numpy_data(data_sframe, features, output):
     """
     :param:
@@ -41,3 +44,26 @@ def predict_output(feature_matrix, weights):
     :return: dot-product of feature_matrix and weights
     """
     return feature_matrix.dot(weights)
+
+
+def normalize_features(feature_matrix):
+    """
+    :param:
+     - `feature_matrix`: numpy array to be normalized (along columns)
+    :return: (normalized feature_matrix, matrix of norms for feature_matrix)
+    """
+    norms = numpy.linalg.norm(feature_matrix, axis=0)
+    return feature_matrix/norms, norms
+
+
+# To test the function, run the following:
+
+# In[10]:
+
+features, norms = normalize_features(numpy.array([[3.,6.,9.],[4.,8.,12.]]))
+expected_features = numpy.array( [[ 0.6,  0.6,  0.6],
+                                  [ 0.8,  0.8,  0.8]])
+assert (features == expected_features).all()
+
+expected_norms = numpy.array( [5.,  10.,  15.])
+assert (expected_norms == norms).all()
