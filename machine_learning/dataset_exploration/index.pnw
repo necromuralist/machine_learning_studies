@@ -1,0 +1,12 @@
+Dataset Exploration
+===================
+<<name='imports', echo=False>>=
+# this package
+from commoncode.index_builder import create_toctree
+@
+
+This is an exploration of public data sets.
+
+<<name='toctree', echo=False, results='sphinx', wrap=False>>=
+create_toctree()
+@
