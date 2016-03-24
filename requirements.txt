@@ -1,15 +1,18 @@
 -f /home/charon/.pip/wheels
 Babel==2.1.1
-GraphLab-Create==1.8
+Django==1.9.4
+GraphLab-Create==1.8.3
 GraphLab-Create-License==1.6.1
 Jinja2==2.8
 MarkupSafe==0.23
+Pillow==3.1.1
 Pweave==0.23
 Pygments==2.0.2
+SFrame==1.8.3
 Sphinx==1.3.3
 alabaster==0.7.6
 argparse==1.2.1
-autopep8==1.2.1
+autopep8==1.2.2
 awscli==1.6.2
 backports.ssl-match-hostname==3.5.0.1
 bcdoc==0.12.2
@@ -26,24 +29,27 @@ enum34==1.1.1
 flake8==2.5.1
 funcsigs==0.4
 functools32==3.2.3.post2
-importmagic==0.1.3
+genson==0.1.0
+image==1.4.4
+importmagic==0.1.7
 ipykernel==4.1.1
 ipython==4.0.0
 ipython-genutils==0.1.0
 ipywidgets==4.1.0
 jedi==0.9.0
 jmespath==0.5.0
-jsonschema==2.5.1
+jsonschema==2.5.0
 jupyter==1.0.0
 jupyter-client==4.1.1
 jupyter-console==4.0.3
 jupyter-core==4.0.6
 librato-metrics==0.4.9
 llvmlite==0.9.0.dev0+4.g133746e
--e git+git@github.com:necromuralist/machine_learning_studies.git@b9e67095d66d4b36c0f65628d5d2db71fe991d29#egg=machine_learning-origin/HEAD
--e git+git@github.com:necromuralist/machine_learning_studies.git@b9e67095d66d4b36c0f65628d5d2db71fe991d29#egg=machinelearning-origin/HEAD
+-e git+git@github.com:necromuralist/machine_learning_studies.git@c5b91b242c8efda034234d1c6cf2ea2c15817ee4#egg=machine_learning-origin/HEAD
+-e git+git@github.com:necromuralist/machine_learning_studies.git@c5b91b242c8efda034234d1c6cf2ea2c15817ee4#egg=machinelearning-origin/HEAD
 matplotlib==1.4.3
 mccabe==0.3.1
+metakernel==0.12.3
 mistune==0.7.1
 mixpanel-py==3.1.1
 mock==1.3.0
@@ -58,7 +64,7 @@ pandas==0.17.1
 path.py==8.1.2
 patsy==0.4.1
 pbr==1.8.1
-pep8==1.5.7
+pep8==1.7.0
 pexpect==4.0.1
 pickleshare==0.5
 prettytable==0.7.2
@@ -67,18 +73,19 @@ ptpython==0.25
 ptyprocess==0.5
 pudb==2015.4.1
 pyasn1==0.1.9
+pydot2==1.0.33
 pyflakes==1.0.0
 pyparsing==2.0.3
-python-dateutil==2.4.2
+python-dateutil==2.5.0
 pytz==2015.7
 pyzmq==14.7.0
 qtconsole==4.1.0
 requests==2.3.0
 rope==0.10.3
 rsa==3.1.2
-scikit-learn==0.17
+scikit-learn==0.17.1
 scipy==0.16.1
-seaborn==0.6.0
+seaborn==0.7.0
 simplegeneric==0.8.1
 singledispatch==3.4.0.3
 six==1.10.0
@@ -89,6 +96,7 @@ sphinx-rtd-theme==0.1.9
 sphinxcontrib-plantuml==0.6
 sseclient==0.0.8
 statsmodels==0.6.1
+-e git+git@github.com:necromuralist/student_intervention.git@02e215aec03c6b40885e5c183979082e442ec3ac#egg=student_intervention-master
 sympy==0.7.6.1
 tabulate==0.7.5
 terminado==0.5
