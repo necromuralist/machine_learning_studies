@@ -1,1 +1,1 @@
-large_data_path = 'large_data'
+LARGE_DATA_PATH = 'large_data'
