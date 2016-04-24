@@ -12,3 +12,4 @@ large_data/
 pickles/
 *.gl/
 *.zip
+.venv
