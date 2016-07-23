@@ -13,3 +13,4 @@ pickles/
 *.gl/
 *.zip
 .venv
+*pkl
